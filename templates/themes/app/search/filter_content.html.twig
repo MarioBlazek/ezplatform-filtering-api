@@ -1,0 +1,34 @@
+{% extends nglayouts.layoutTemplate %}
+
+{% set show_path = false %}
+
+{% block pre_content %}
+    <header class="full-page-header full-article-header">
+        <div class="container">
+            <h1 class="full-page-title">Latest articles</h1>
+            <div class="full-page-info">
+                Here you can find the fresh stuff.
+            </div>
+        </div>
+    </header>
+
+    <div class="full-search-results">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div id="search-result">
+                        {% for content in results.iterator %}
+                            {% include '@ezdesign/parts/ng_view_content.html.twig' with {
+                                content: content,
+                                view_type: 'search'
+                            } only %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+{% endblock %}

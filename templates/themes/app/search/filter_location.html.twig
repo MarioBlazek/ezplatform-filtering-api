@@ -1,0 +1,42 @@
+{% extends nglayouts.layoutTemplate %}
+
+{% set show_path = false %}
+
+{% block pre_content %}
+    <header class="full-page-header full-article-header">
+        <div class="container">
+            <h1 class="full-page-title">Latest articles</h1>
+            <div class="full-page-info">
+                Here you can find the fresh stuff.
+            </div>
+        </div>
+    </header>
+
+    <div class="full-search-results">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    {% if pager.haveToPaginate() %}
+                        {{ pagerfanta(pager, 'ngsite') }}
+                    {% endif %}
+
+                    <div id="search-result">
+                        {% for location in pager.iterator %}
+                            {% include '@ezdesign/parts/ng_view_content.html.twig' with {
+                                location: location,
+                                view_type: 'search'
+                            } only %}
+                        {% endfor %}
+                    </div>
+
+                    {% if pager.haveToPaginate() %}
+                        {{ pagerfanta(pager, 'ngsite') }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+{% endblock %}

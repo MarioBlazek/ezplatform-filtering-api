@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["ezplatform-admin-ui-link-manager-list-js"],{25:function(n,t,e){n.exports=e("3GcQ")},"3GcQ":function(n,t){document.getElementById("search_data_status").addEventListener("change",(function(){this.form.submit()}))}},[[25,"runtime"]]]);

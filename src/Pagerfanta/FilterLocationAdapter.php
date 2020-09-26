@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Pagerfanta;
 
 use eZ\Publish\API\Repository\LocationService;
@@ -48,5 +50,4 @@ final class FilterLocationAdapter implements AdapterInterface
         return $this->locationService
             ->find($filter);
     }
-
 }

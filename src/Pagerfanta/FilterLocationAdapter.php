@@ -6,15 +6,15 @@ use eZ\Publish\API\Repository\LocationService;
 use eZ\Publish\API\Repository\Values\Filter\Filter;
 use Pagerfanta\Adapter\AdapterInterface;
 
-class FilterLocationAdapter implements AdapterInterface
+final class FilterLocationAdapter implements AdapterInterface
 {
     /**
-     * @var Filter
+     * @var \eZ\Publish\API\Repository\Values\Filter\Filter
      */
     private $filter;
 
     /**
-     * @var LocationService
+     * @var \eZ\Publish\API\Repository\LocationService
      */
     private $locationService;
 

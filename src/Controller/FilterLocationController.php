@@ -14,10 +14,10 @@ use Symfony\Component\Routing\Annotation\Route;
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
 use eZ\Publish\API\Repository\Values\Content\Query\SortClause;
 
-class FilterLocationController extends Controller
+final class FilterLocationController extends Controller
 {
     /**
-     * @Route("/example/find/location", name="app_find_location")
+     * @Route("/example/filter/location", name="app_filter_location")
      */
     public function findContent(Request $request, LocationService $locationService)
     {
@@ -43,7 +43,6 @@ class FilterLocationController extends Controller
 
         return $this->render('@ezdesign/search/filter_location.html.twig',
             [
-                'search_text' => 'Test',
                 'pager' => $pager,
             ]
         );

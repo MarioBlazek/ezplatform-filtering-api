@@ -10,10 +10,10 @@ use Symfony\Component\Routing\Annotation\Route;
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
 use eZ\Publish\API\Repository\Values\Content\Query\SortClause;
 
-class FilterContentController extends Controller
+final class FilterContentController extends Controller
 {
     /**
-     * @Route("/example/find/content", name="app_find_content")
+     * @Route("/example/filter/content", name="app_filter_content")
      */
     public function findContent(ContentService $contentService)
     {
@@ -33,7 +33,6 @@ class FilterContentController extends Controller
 
         return $this->render('@ezdesign/search/filter_content.html.twig',
             [
-                'search_text' => 'Test',
                 'results' => $results,
             ]
         );

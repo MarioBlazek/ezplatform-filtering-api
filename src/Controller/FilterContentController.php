@@ -22,7 +22,7 @@ final class FilterContentController extends Controller
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function findContent(ContentService $contentService): Response
+    public function filterContent(ContentService $contentService): Response
     {
         $rootLocation = $this->getRootLocation();
 

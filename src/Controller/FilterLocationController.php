@@ -26,7 +26,7 @@ final class FilterLocationController extends Controller
      *
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function findContent(Request $request, LocationService $locationService): Response
+    public function filterContent(Request $request, LocationService $locationService): Response
     {
         $rootLocation = $this->getRootLocation();
 
